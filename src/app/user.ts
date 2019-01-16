@@ -8,3 +8,4 @@ export class User {
         public subscribe: boolean
     ){}
 }
+/*create an instance of this model in app.component.ts*/
