@@ -81,8 +81,9 @@ The control's value is valid     ng-valid                ng-invalid
       
       <div class="form-group">
         <label>Name</label><!--add a template reference variable #name to the name input
-           element then bind to the input className property-->
-        <input type="text" #name class="form-control"name="userName" [(ngModel)] = "userModel.name">
+           element then bind to the input className property
+          To test for validity, we have to add some sort of a rule,that is required-->
+        <input type="text"required #name class="form-control"name="userName" [(ngModel)] = "userModel.name">
       </div>
       {{name.className}}
       <div class="form-group">
