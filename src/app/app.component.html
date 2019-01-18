@@ -80,7 +80,9 @@ The property is basically the same with the class with the ng- removed-->
   <div class="container-fluid">
     <H1>Code Particles Enrollment Form</H1>
     <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate><!--ngForm provides the overall form validation of the entire form
-    novalidate attribute prevents browser validation when we click the submit button-->
+    novalidate attribute prevents browser validation when we click the submit button
+  
+  NOTE: TO BE ABLE TO SEND THE FORM TO THE SERVER, YOU NEED A SERVICE-->
 
       <!--{{userForm.form.valid}}-->
       <div class="form-group">
