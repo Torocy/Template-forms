@@ -117,7 +117,7 @@ The property is basically the same with the class with the ng- removed-->
      
       <div class="form-group"><!--select control validation-->
         <select required #topic="ngModel" [class.is-invalid]="topic.invalid && topic.touched" class="custom-select" name="topic" [(ngModel)] = "userModel.topic">
-          <option value="">I am interested in</option>
+          <option value="default">I am interested in</option>
           <option *ngFor="let topic of topics">{{ topic }}</option>
         </select>
         <small class="text-danger" [class.d-none]="topic.valid || topic.untouched">Please choose a topic</small>
