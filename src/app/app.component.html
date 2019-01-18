@@ -91,7 +91,9 @@ The property is basically the same with the class with the ng- removed-->
       VALIDATION WITH VISUAL FEEDBACK
       A good user experience is to visually indicate to the user if a form field is 
       invalid when they enter data-->
-        <input type="text"required #name="ngModel"[class.is-invalid]="name.invalid && name.touched" class="form-control "name="userName" [(ngModel)] = "userModel.name">
+        <input type="text"required #name="ngModel"[class.is-invalid]="name.invalid && name.touched"
+         class="form-control "name="userName" [(ngModel)] = "userModel.name">
+         <small>Name is required</small><!--Display an error message-->
       </div>
   <!--To ensure that the class is applied on when the form control is invalid, we use ngModel
      properties coupled with class binding-->
