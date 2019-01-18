@@ -79,8 +79,8 @@ For each of the classes,Angular provides an associated property on the ngModel d
 The property is basically the same with the class with the ng- removed-->
   <div class="container-fluid">
     <H1>Code Particles Enrollment Form</H1>
-    <form #userForm="ngForm">
-      
+    <form #userForm="ngForm"><!--ngForm provides the overall form validation of the entire form-->
+      {{userForm.form.valid}}
       <div class="form-group">
         <label>Name</label><!--add a template reference variable #name to the name input
            element then bind to the input className property
