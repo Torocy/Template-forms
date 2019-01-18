@@ -141,7 +141,7 @@ The property is basically the same with the class with the ng- removed-->
       <input class="form-check-input" name="subscribe" type="checkbox" [(ngModel)] = "userModel.subscribe">
       <label class="form-check-label">Send me promotional offers</label>
     </div>
-    <button [disabled]="userForm.form.invalid"class="btn btn-primary" type="submit">Submit Form</button>
+    <button [disabled]="userForm.form.invalid || topicHasError"class="btn btn-primary" type="submit">Submit Form</button>
       
     </form>
   </div>
