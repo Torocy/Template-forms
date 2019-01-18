@@ -9,4 +9,13 @@ import { User } from './user';
 export class AppComponent {
   topics = ['Angular', 'React', 'Vue'];
   userModel = new User('Torocy','torocy45@gmail.com', 700903286 , 'default', 'morning' ,true );
+  //set the error flag
+  topicHasError = true;
+  //define method
+  validateTopic(value){
+    if (value === 'default'){
+      this.topicHasError = true;
+    }else
+    this.topicHasError = false;
+  }
 }
