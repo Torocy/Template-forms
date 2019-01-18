@@ -14,7 +14,7 @@ export class EnrollmentService {
 
   //create a method with an argument user of type User to make the post request
   enroll(user : User){
-    this._http.post<any>(this._url, user)//the post request  will return the response as an observable so we need to subscribe to the observable in app component
+   return this._http.post<any>(this._url, user)//the post request  will return the response as an observable so we need to subscribe to the observable in app component
     
 
   }

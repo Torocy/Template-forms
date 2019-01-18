@@ -10,7 +10,7 @@ import { EnrollmentService } from './enrollment.service';
 export class AppComponent {
   topics = ['Angular', 'React', 'Vue'];
   userModel = new User('Torocy','torocy45@gmail.com', 700903286 , 'default', 'morning' ,true );
-  
+
 //inject it
   constructor(private _enrollmentService: EnrollmentService){}
   //set the error flag
@@ -23,6 +23,10 @@ export class AppComponent {
     this.topicHasError = false;
   }
   onSubmit(){
-    console.log(this.userModel);
+    this._enrollmentService.enroll(this.userModel)
+      .subscribe(
+        data =>console.log('success!', data),
+        error =>console.error('Error!', error)
+      )
   }
 }
