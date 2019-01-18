@@ -74,7 +74,9 @@
 The control has been visited     ng-touched              ng-untouched
 The control's value has changed  ng-dirty                ng-pristine
 The control's value is valid     ng-valid                ng-invalid
--->
+Although these classes can be used to provide visual feedback, Angular provides an alternative.
+For each of the classes,Angular provides an associated property on the ngModel directive
+The property is basically the same with the class with the ng- removed-->
   <div class="container-fluid">
     <H1>Code Particles Enrollment Form</H1>
     <form #userForm="ngForm">
@@ -82,10 +84,12 @@ The control's value is valid     ng-valid                ng-invalid
       <div class="form-group">
         <label>Name</label><!--add a template reference variable #name to the name input
            element then bind to the input className property
-          To test for validity, we have to add some sort of a rule,that is required-->
-        <input type="text"required #name class="form-control"name="userName" [(ngModel)] = "userModel.name">
+          To test for validity, we have to add some sort of a rule,that is required
+  NOTE: We get access to the ngModel properties by creating a reference to the ngModel directive
+        Then you can easily bind to the different properties-->
+        <input type="text"required #name="ngModel" class="form-control"name="userName" [(ngModel)] = "userModel.name">
       </div>
-      {{name.className}}
+      {{name.untouched}}
       <div class="form-group">
         <label>Email</label>
         <input type="email" class="form-control" name="email" [(ngModel)] = "userModel.email">
