@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from './user';
+import { EnrollmentService } from './enrollment.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ import { User } from './user';
 export class AppComponent {
   topics = ['Angular', 'React', 'Vue'];
   userModel = new User('Torocy','torocy45@gmail.com', 700903286 , 'default', 'morning' ,true );
+  
+//inject it
+  constructor(private _enrollmentService: EnrollmentService){}
   //set the error flag
   topicHasError = true;
   //define method
